@@ -13,6 +13,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,9 +31,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  outline: none;
+  
   color: #ccc;
 
 }
