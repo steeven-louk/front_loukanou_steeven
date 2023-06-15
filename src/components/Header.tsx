@@ -13,6 +13,11 @@ export const Header:React.FC = () => {
         <header>
 
           <Navbar toggleMobileMenu={toggleMobileMenu}  isMobileMenuOpen={isMobileMenuOpen}/>
+          
+          <div className="text-desc text-white ps-3">
+            <h2 className="fw-bold">Travel that moves you</h2>
+            <h4>Book train, bus, flight and ferry tickets</h4>
+          </div>
         </header>
     );
 };

@@ -33,7 +33,7 @@ const Navbar: React.FC<Props>  =({isMobileMenuOpen,toggleMobileMenu}) => {
                 <FaTimes />
             </div>
         </div>
-        <ul className="d-flex ">
+        <ul className="bg-danger">
             <li className="nav-item">
                 <a href="#" className="nav-link">
                   <FaBars className="hide-icon"/>  Currency
@@ -49,12 +49,12 @@ const Navbar: React.FC<Props>  =({isMobileMenuOpen,toggleMobileMenu}) => {
                   <FaBookmark className="hide-icon"/>  Your bookings
                 </a>
             </li>
-            <li className="nav-item  hide-link">
+            <li className="nav-item hide-link">
                 <a href="#" className="nav-link">
                     Sign in
                 </a>
             </li>
-            <li className="nav-item hide-link ">
+            <li className="nav-item hide-link  ">
                 <a href="#" className="nav-link">
                     Create an account
                 </a>
