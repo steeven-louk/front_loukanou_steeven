@@ -16,7 +16,7 @@ header {
     }
 
     .navbar_ {
-        padding: 20px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -48,19 +48,29 @@ header {
             li {
                 padding: 10px;
                 margin-left: 10px;
-                border-bottom: 1px solid #ccc;
+                border-bottom: .5px solid #ccc;
+                // font-size: 16px;
+                a{
+                    font-size: 16px;
 
+                    .icon{
+                        font-size: 20px;
+                    }
+                }
                 &:hover {
                     background: #494646e7
                 }
             }
 
+            .hide-link{
+                display: none;
+            }
          
         }
 
         .useful {
             width: 100%;
-            background: #ccc;
+            background: #f1f2f6;
             display: block;
         }
 
@@ -88,6 +98,7 @@ header {
 
     .navbar-mobile-icon {
         display: block;
+        color: #fff;
         cursor: pointer;
     }
 
@@ -107,61 +118,63 @@ header {
 
     @media screen and (min-width: 1026px) {
 
-        
             padding: 0 70px;
-
-
        
         .navbar_ {
-            display: flex;
+            // display: flex;
             padding: 10px ;
-
-            align-items: center;
+            justify-content: space-evenly;
+            // align-items: center;
             width: 100%;
 
         }
 
 
         .navbar-links {
-            display: flex;
-            align-items: center;
+            display: inline-flex;
+            // align-items: center;
 
             position: relative;
             flex-direction: row-reverse;
-            justify-content: space-evenly;
-            width: inherit;
             height: inherit;
             top: 4px;
             transform: translateX(0) !important;
 
+            .right-link{
+                width: 100em;
+                justify-content: end;
+            }
             ul {
                 margin: 0;
                 padding: 0;
                 display: flex !important;
                 visibility: visible;
-                // width: fit-content;
-                width: 100%!important;
+                // width: 100%!important;
                 flex-direction: row;
 
                 li {
                     border: none;
                     display: flex;
+                    // padding: 0;
 
                     a {
                         color: #fff;
-                        text-decoration: none;
                         font-weight: 400;
                         display: flex;
                         align-items: center;
-                        font-size: 16px;
+                        font-size: 14px;
                         &:hover {
-                            color: initial;
+                            color: #fff;
                         }
                     }
 
                     &:hover {
                         background: none;
                     }
+                }
+
+                .account{
+                    font-size: 14px;
                 }
 
                 .hide-link {

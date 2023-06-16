@@ -95,9 +95,10 @@ const Search: React.FC = () => {
         { value: 'Round trip', label: 'Round trip' },
       ]}
     />
-        <select className="border-0 fw-semibold">
+        <select className="border-0 d-none  d-md-block fw-semibold">
           <option>1 Adult, No Discount card</option>
         </select>
+        
       </div>
       <div className="form">
         <div className="row align-items-baseline">
@@ -112,7 +113,7 @@ const Search: React.FC = () => {
             />
           </div>
           <div className="form-group position-relative col-md-3">
-            <CgEditBlackPoint className="icon " />
+          <i className="fa-solid fa-location-dot icon"></i>
             <AutoComplete
               onChange={handleDestinationSearch}
               value={destinationSearch}
@@ -134,7 +135,7 @@ const Search: React.FC = () => {
             </Space>
           </div>
           <div className="form-group col-md-2">
-            <button className="btn btn-warning form-control">Search</button>
+            <button className="w-100">Search</button>
           </div>
         </div>
 

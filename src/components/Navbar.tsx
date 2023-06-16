@@ -1,9 +1,11 @@
 import React from 'react'
-import { FaBars, FaBus, FaTimes, FaPlane, FaBookmark } from "react-icons/fa";
+import { FaBars, FaBus, FaTimes, FaPlane, FaBookmark, FaChevronDown, FaChevronRight } from "react-icons/fa";
 import {IoMdBoat, IoMdChatbubbles, IoMdTrain} from "react-icons/Io";
 
 import logo from '../assets/logo.png';
 import logo_mobile from '../assets/logo-mobile.png'
+import flagUs from '../assets/flag-us.svg'
+
 
 type Props={
     isMobileMenuOpen: boolean,
@@ -12,78 +14,84 @@ type Props={
 
 const Navbar: React.FC<Props>  =({isMobileMenuOpen,toggleMobileMenu}) => {
   return (
-    <nav className="navbar_ ">
+    <div className="container">
+           <nav className="navbar_ ">
     <div className="navbar-logo">
-        <img src={logo} alt="logo" width="100" />
+        <img src={logo} alt="logo" width="100" loading='lazy' />
 
     </div>
-    <div
-        className={`navbar-links ${isMobileMenuOpen ? "mobile-menu-open" : ""
-            }`}
-    >
+    <div className={`navbar-links ${isMobileMenuOpen ? "mobile-menu-open" : "" }`}>
         <div className="navbar-mobile-header">
             <div className="navbar-logo-mobile">
                 <img
                     src={logo_mobile}
                     alt="logo-mobile"
                     width="100"
+                    loading='lazy'
                 />
             </div>
             <div className="navbar-close-icon" onClick={toggleMobileMenu}>
                 <FaTimes />
             </div>
         </div>
-        <ul className="bg-danger">
+        <ul className="right-link align-items-center ">
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <FaBars className="hide-icon"/>  Currency
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                  <span className='hide-icon '><FaBars className="icon"/>  Currency</span>
+                  <span className='d-inline-flex align-items-center fw-bold'>EUR <FaChevronRight className="hide-icon"/></span>
                 </a>
             </li>
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                    <IoMdChatbubbles className="hide-icon"/> Language
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                    <span className='hide-icon'><IoMdChatbubbles className="icon"/> Language</span>
+                    <span className='d-inline-flex align-items-center fw-bold'><img src={flagUs} width="30px" loading='lazy' alt="flag-us" /> <FaChevronRight className="hide-icon"/></span>
+
                 </a>
             </li>
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <FaBookmark className="hide-icon"/>  Your bookings
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                  <span><FaBookmark className="hide-icon icon"/>  Your bookings</span>
+                  <FaChevronRight className="hide-icon"/>
                 </a>
             </li>
-            <li className="nav-item hide-link">
-                <a href="#" className="nav-link">
+            
+            <div className='d-inline-flex ms-2 gap-3 account'>
+            <a className="nav-link  text-white hide-link">
                     Sign in
-                </a>
-            </li>
-            <li className="nav-item hide-link  ">
-                <a href="#" className="nav-link">
+            </a>
+            <a className="nav-link  text-white hide-link">
                     Create an account
-                </a>
-            </li>
+            </a>
+            </div>
         </ul>
         <span className="text-muted useful p-2 fw-semibold text-uppercase">useful links</span>
 
         <ul className="navbar-links-right ">
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                   <IoMdTrain className="hide-icon"/> Trains
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                   <span><IoMdTrain className="hide-icon icon"/> Trains</span>
+                   <FaChevronDown className="hide-icon"/>
                 </a>
             </li>
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                   <FaBus className="hide-icon"/> Buses
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                   <span><FaBus className="hide-icon icon"/> Buses</span>
+                   <FaChevronDown className="hide-icon"/>
                 </a>
             </li>
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                   <FaPlane className="hide-icon"/> Flights
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                   <span><FaPlane className="hide-icon icon"/> Flights</span>
+                   <FaChevronDown className="hide-icon"/>
                 </a>
             </li>
             <li className="nav-item">
-                <a href="#" className="nav-link">
-                   <IoMdBoat className="hide-icon"/> Ferries
+                <a href="#" className="nav-link d-flex align-items-center justify-content-between">
+                   <span><IoMdBoat className="hide-icon icon"/> Ferries</span>
+                   <FaChevronDown className="hide-icon"/>
                 </a>
             </li>
-            <button className="btn btn-danger  justify-content-center  mx-auto signIn">Sign in</button>
+            <button className="justify-content-center d-none mx-auto signIn">Sign in</button>
 
         </ul>
     </div>
@@ -92,6 +100,7 @@ const Navbar: React.FC<Props>  =({isMobileMenuOpen,toggleMobileMenu}) => {
     </div>
 
 </nav>
+    </div>
   )
 }
 

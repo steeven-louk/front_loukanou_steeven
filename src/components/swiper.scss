@@ -1,0 +1,28 @@
+.swiper{
+
+    .swiper-pagination-bullets{
+        display: none;
+    }
+    .swiper-button-next,.swiper-button-prev{
+        top: 38%;
+    }
+    
+    .slide-content{
+
+        img{
+            object-fit: cover;
+            border: none;
+            border-radius: 10px;
+            // width: 255px;
+            // height: 174px;
+            width: 216px;
+            height: 125px;
+            cursor: pointer;
+        }
+    
+        p{
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
