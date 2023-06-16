@@ -1,0 +1,57 @@
+.swiper {
+
+    .swiper-pagination-bullets {
+        display: none;
+    }
+
+    // suppression des fleches de navigation pour les ecrans mobile
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .slide {
+        margin: 0 30px;
+    }
+
+    .slide-content {
+
+        img {
+            object-fit: cover;
+            border: none;
+            border-radius: 10px;
+
+            width: 216px;
+            height: 125px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+
+// style pour les ecrans ayant une largeur superieurs ou égal à 1026px
+    @media only screen and (min-width: 1026px) {
+        .swiper-scrollbar-horizontal {
+            display: none;
+        }
+
+        .slide {
+            margin: 0;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: block;
+            top: 38%;
+
+        }
+
+        .swiper-button-next {
+            right: 30px;
+        }
+    }
+}

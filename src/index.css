@@ -1,17 +1,28 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  @font-face {
+    font-family: GT-Walsheim;
+    src: url('./assets/font/GT-Walsheim-Condensed-Medium-Trial.woff2'),
+    url('./assets/font/GT-Walsheim-Condensed-Regular-Trial.woff2'),
+    url('./assets/font/GT-Walsheim-Condensed-Thin-Trial.woff2'),
+    url('./assets/font/GT-Walsheim-Condensed-Ultra-Bold-Trial.woff2'),
+    url('./assets/font/GT-Walsheim-Light-Trial.woff2');
+  }
+
   line-height: 1.5;
   font-weight: 400;
 
-.bg-secondaire{
-  background: #fff;
-}
+  .bg-secondaire{
+    background: #fff;
+  }
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
 
 *,*::before,*::after{
   margin: 0;
@@ -26,6 +37,8 @@
 body{
   overflow-X: hidden;
   background: #f1f2f6;
+  font-family: GT-Walsheim, sans-serif!important;
+
 }
 
 a {
@@ -37,7 +50,15 @@ a {
 h1,h4,h2 {
   
   line-height: 1.3;
-  color: #132968;
+  color: #132968!important;
+}
+h1,h2{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 24px;
 }
 
 img{
@@ -58,7 +79,10 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   color: #fff;
+  height: 48px;
 }
+
+
 button:hover {
   border-color: #fa6b6b;
 }

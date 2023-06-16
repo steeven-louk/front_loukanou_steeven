@@ -1,57 +1,94 @@
-.newsletter{
-    padding: 10px;
+.section-1 h1{
+    font-weight: 700;
+}
+.section-2 .icon {
+    font-size: 30px;
+}
 
-    p{
+.section-4 {
+    .card {
+        max-width: 375px;
+        padding: 15px 0;
+        margin: 0 auto;
+  color: #132968;
+
+        .card-img-top {
+            max-width: 280px;
+            display: block;
+            margin: auto
+        }
+
+        .cart-title{
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+    }
+}
+
+.section-6 {
+    padding: 10px;
+    align-items: center;
+
+    p {
         font-size: 30px;
         margin-bottom: 38px;
+        font-weight: 700;
+
+        // style pour les ecrans ayant une largeur superieurs ou égal à 780px
+        @media only screen and (min-width: 780px) {
+            font-size: 40px;
+            padding: 0 30px;
+
+        }
     }
 
-    span{
+    span {
         color: #a1a9c3;
         font-weight: 700;
         letter-spacing: 1.6px;
         font-size: 16px;
     }
 
-    .divider{
+    .divider {
         height: 4px;
         width: 40px;
         background: #a1a9c3;
     }
 
     form .form-group {
-        .icon{
+        .icon {
             position: absolute;
             top: 27px;
+            left: 5px;
             font-size: 25px;
             color: rgb(66, 84, 134);
         }
-        input{
-        
-            display: block;
+
+        input {
+
+            width: 24em ;
             height: 48px;
             padding-left: 40px;
             color: rgb(66, 84, 134);
             background-color: rgb(241, 242, 246);
+
+            @media only screen and (min-width: 780px) {
+                width: 35em !important;
+            }
         }
     }
 }
 
-section{
-    .card{
-        max-width: 375px;
-        padding: 15px 0;
-        margin: 0 auto;
-        
-        .card-img-top{
-            max-width: 280px;
-            display: block;
-            margin: auto
+// style de button pour les ecrans ayant une largeur superieurs ou égal à 780px
+.section-3,
+.section-5,
+.section-6 {
+    button {
+        @media only screen and (min-width: 780px) {
+            width: 250px !important;
         }
-       
+
     }
 }
 
-.promo .icon{
-    font-size: 30px;
-}
