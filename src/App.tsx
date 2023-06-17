@@ -13,7 +13,6 @@ import sectionThree from "./assets/section/sectionThree.svg";
 import BatBat from './assets/Bat_Bat.png'
 // importation des images
 
-import  {IoMdMail}  from "react-icons/Io";
 import SwiperComponent from "./components/swiper/Swiper";
 
 // importation du style
@@ -184,7 +183,7 @@ function App() {
 
             <form className="justify-content-center align-items-center gap-3 d-flex flex-wrap">
               <div className="form-group position-relative d-inline-flex">
-                <IoMdMail className="icon" />
+              <i className="fa-solid fa-envelope icon"></i>
                 <input
                   type="text"
                   placeholder="Your email"

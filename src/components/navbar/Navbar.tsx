@@ -11,7 +11,6 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 
-import { IoMdBoat, IoMdChatbubbles, IoMdTrain } from "react-icons/Io";
 
 // ICONS
 
@@ -68,7 +67,8 @@ const Navbar: React.FC<Props> = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             <li className="nav-item">
               <a href="#" className="nav-link d-flex align-items-center justify-content-between">
                 <span className="hide-icon">
-                  <IoMdChatbubbles className="icon"/> Language
+                <i className="fa-solid fa-comments icon"></i>
+                Language
                 </span>
                 <span className="d-inline-flex align-items-center fw-bold">
                   <img src={flagUs} width="30px" loading="lazy" alt="flag-us" />{" "}
@@ -101,7 +101,7 @@ const Navbar: React.FC<Props> = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             <li className="nav-item">
               <a href="#" className="nav-link d-flex align-items-center justify-content-between">
                 <span>
-                  <IoMdTrain className="hide-icon icon" /> Trains
+                  <i className="fa-solid fa-train-subway hide-icon icon me-1"></i>Trains
                 </span>
                 <FaChevronDown className="hide-icon" />
               </a>
@@ -128,7 +128,8 @@ const Navbar: React.FC<Props> = ({ isMobileMenuOpen, toggleMobileMenu }) => {
             <li className="nav-item">
               <a href="#" className="nav-link d-flex align-items-center justify-content-between">
                 <span>
-                  <IoMdBoat className="hide-icon icon" /> Ferries
+                <i className="fa-solid fa-ship hide-icon icon"></i>
+                  Ferries
                 </span>
                 <FaChevronDown className="hide-icon" />
               </a>
