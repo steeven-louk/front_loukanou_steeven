@@ -13,7 +13,7 @@ import sectionThree from "./assets/section/sectionThree.svg";
 import BatBat from './assets/Bat_Bat.png'
 // importation des images
 
-import { IoMdMail } from "react-icons/Io";
+import  {IoMdMail}  from "react-icons/Io";
 import SwiperComponent from "./components/swiper/Swiper";
 
 // importation du style
