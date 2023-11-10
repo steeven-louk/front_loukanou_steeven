@@ -14,6 +14,9 @@ export const Header: React.FC = () => {
 
   return (
     <header>
+      <div className="bg-danger p-2 text-center text-white fw-bold">
+        <span>ceci est un clone statique de OMIO qui simule le systeme de recherche complexe de la platfom</span>
+      </div>
       <Navbar
         toggleMobileMenu={toggleMobileMenu}
         isMobileMenuOpen={isMobileMenuOpen}
